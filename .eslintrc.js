@@ -7,6 +7,16 @@ module.exports = {
       {
         endOfLine: "auto",
       },
+      {
+        usePrettierrc: false,
+        singleQuote: true,
+        parser: "flow",
+      },
+      {
+        fileInfoOptions: {
+          withNodeModules: true,
+        },
+      },
     ],
   },
 };
