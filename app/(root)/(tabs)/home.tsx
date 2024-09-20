@@ -2,7 +2,7 @@ import GoogleTextInput from "@/components/GoogleTextInput";
 import Map from "@/components/Map";
 import RideCard from "@/components/RideCard";
 import { icons, images } from "@/constants";
-import { useLocationStore } from "@/store/indes";
+import { useLocationStore } from "@/store";
 import { SignedIn, SignedOut, useUser } from "@clerk/clerk-expo";
 import * as Location from "expo-location";
 import { Link, router } from "expo-router";
@@ -145,7 +145,16 @@ const Home = () => {
     })();
   }, []);
 
-  const handleDestinationPress = () => {};
+  const handleDestinationPress = (location: {
+    latitude: number;
+    longitude: number;
+    address: string;
+  }) => {
+    setDestinationLocation(location);
+
+    router.push(`/(root)/find-ride`);
+  };
+
   return (
     <SafeAreaView>
       <FlatList
