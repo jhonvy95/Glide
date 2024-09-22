@@ -11,7 +11,7 @@ const DriverCard = ({ item, selected, setSelected }: DriverCardProps) => {
     <TouchableOpacity
       onPress={setSelected}
       className={`${
-        selected === item.id ? "bg-general-600" : "bg-blue-100"
+        selected === item.id ? "bg-general-600" : "bg-gray-100"
       } flex flex-row items-center justify-between py-5 px-3 rounded-xl mt-2`}
     >
       <Image source={{ uri: item.profile_image_url }} className="w-14 h-14 rounded-full" />

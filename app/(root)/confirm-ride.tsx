@@ -8,7 +8,7 @@ import DriverCard from "@/components/DriverCard";
 
 const ConfirmRide = () => {
   const { drivers, selectedDriver, setSelectedDriver } = useDriverStore();
-
+  console.log({ selectedDriver });
   return (
     <RideLayout title={"Choose a Rider"} snapPoints={["65%", "85%"]}>
       <FlatList
